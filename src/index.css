@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f9fafb;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #181a1b;
+  color: #e3e3e3;
+}
+
+body.dark .bg-white,
+body.dark .drug-registration-form,
+body.dark .min-w-full {
+  background: #23272a !important;
+  color: #e3e3e3 !important;
+}
+
+body.dark .border,
+body.dark .border-gray-200 {
+  border-color: #333 !important;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #23272a;
+  color: #e3e3e3;
+  border-color: #444;
+}
+
+body.dark table {
+  background: #23272a;
+  color: #e3e3e3;
+}
+
+body.dark th {
+  background: #263043;
+  color: #90caf9;
+}
+
+.navbar {
+  display: flex;
+  gap: 12px;
+  background: #f8f9fa;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar button.active,
+.navbar button:hover {
+  background: #1976d2;
+  color: #fff;
+}
+
+.tab-content {
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  min-height: 300px;
+}
+
+/* DrugRegistration form stilleri */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+  padding: 8px;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button[type="submit"] {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background: #1565c0;
+}
+
+.bg-white { background: #fff; }
+.text-gray-900 { color: #222; }
+.text-gray-600 { color: #555; }
+.text-gray-500 { color: #888; }
+.border-gray-200 { border-color: #e5e7eb; }
+
+body.dark .bg-white { background: #23272a !important; }
+body.dark .text-gray-900 { color: #e3e3e3 !important; }
+body.dark .text-gray-600 { color: #b0b0b0 !important; }
+body.dark .text-gray-500 { color: #888 !important; }
+body.dark .border-gray-200 { border-color: #333 !important; }
+body.dark .shadow-sm, body.dark .shadow-md { box-shadow: none !important; }

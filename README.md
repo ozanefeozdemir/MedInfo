@@ -26,6 +26,13 @@ It allows users to search for drugs, active ingredients, brand names, and excipi
 | **Machine Learning** | PyTorch, torchvision (for drug recognition model) |
 | **Tools** | Git, GitHub, Postman |
 
+![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-18-green?logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-4.18.2-black?logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.0.6-green?logo=mongodb)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.1-red?logo=pytorch)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
 ---
 
 ## ⚡ Getting Started

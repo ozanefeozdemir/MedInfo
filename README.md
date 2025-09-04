@@ -1,64 +1,77 @@
-🧬 MedInfo
+# 🧬 MedInfo
 
-MedInfo is a web-based application designed to manage and provide comprehensive information about medications.
-The system allows users to quickly search for drugs, active ingredients, brand names, and excipients, making medical information easily accessible.
+**MedInfo** is a web-based application that provides comprehensive drug information and recognition.  
+It allows users to search for drugs, active ingredients, brand names, and excipients, and also includes a **drug recognition model** trained to identify medications from images.
 
-🚀 Features
+---
 
-🔍 Drug Search: Search by drug name, active ingredient, or brand name.
+## 🚀 Features
 
-📋 Drug Details: View active ingredients, excipients, and brand names.
+- 🔍 **Drug Search**: Search by drug name, active ingredient, or brand name.  
+- 📋 **Drug Details**: View active ingredients, excipients, and brand names.  
+- 📷 **Drug Recognition**: Upload an image of a pill or packaging and let the trained model predict the drug.  
+- 🌐 **Responsive UI**: Modern and user-friendly interface built with React.  
+- ⚙️ **Backend API**: Express.js RESTful API for fast data access.  
+- 🗄 **Database**: MongoDB for scalable and flexible storage.  
 
-🌐 Responsive UI: Clean and modern interface built with React.
+---
 
-⚙️ Backend API: RESTful API built with Express.js for fast and reliable data access.
+## 🏗 Technologies
 
-🗄 Database: MongoDB for scalable and flexible data storage.
+| Layer | Technologies |
+|-------|--------------|
+| **Frontend** | React, Bootstrap |
+| **Backend** | Node.js, Express.js, REST API |
+| **Database** | MongoDB |
+| **Machine Learning** | PyTorch, torchvision (for drug recognition model) |
+| **Tools** | Git, GitHub, Postman |
 
-🛠 Future Enhancements:
+---
 
-User registration and login system
+## ⚡ Getting Started
 
-Favorite drug lists
-
-Admin panel for pharmacists or doctors
-
-🏗 Technologies
-Layer	Technologies
-Frontend	React, Bootstrap / TailwindCSS
-Backend	Node.js, Express.js, REST API
-Database	MongoDB
-Tools	Git, GitHub, Postman
-⚡ Getting Started
-1. Clone the repository
+### 1. Clone the repository
+```bash
 git clone https://github.com/ozanefeozdemir/MedInfo.git
 cd MedInfo
-
 2. Backend Setup
+bash
+Kodu kopyala
 cd backend
 npm install
 npm start
-
-
-The server will run at http://localhost:5000 by default.
+The server will run at http://localhost:5000.
 
 3. Frontend Setup
+bash
+Kodu kopyala
 cd frontend
 npm install
 npm start
-
-
 The React app will run at http://localhost:3000.
 
+🧠 Drug Recognition Model
+The project includes a deep learning model trained to identify drugs from images.
+
+Framework: PyTorch
+
+Dataset: Images of pills and packaging (preprocessed with torchvision transforms)
+
+Usage: Upload an image through the frontend → The backend sends it to the model → Model predicts the drug and returns details.
+
+This allows users to identify drugs visually, which is especially helpful for pharmacists and healthcare providers.
+
 📁 Project Structure
+graphql
+Kodu kopyala
 MedInfo/
 ├─ frontend/       # React application
-├─ backend/        # Express API server
+├─ backend/        # Express API server + ML model
+├─ model/          # Trained PyTorch drug recognition model
+├─ dataset/        # Images used for training/testing
 ├─ README.md       # Project documentation
 └─ .gitignore
-
 📝 API Endpoints
-
 GET /api/drugs – List all drugs
 
 GET /api/drugs/:id – Get details of a specific drug
@@ -69,8 +82,9 @@ PUT /api/drugs/:id – Update drug details (Admin)
 
 DELETE /api/drugs/:id – Delete a drug (Admin)
 
-👨‍💻 Contributing
+POST /api/drugs/recognize – Upload an image and get predicted drug
 
+👨‍💻 Contributing
 Fork the repository
 
 Create a new branch (git checkout -b feature/your-feature)
@@ -82,5 +96,4 @@ Push to the branch (git push origin feature/your-feature)
 Create a Pull Request
 
 📄 License
-
 This project is licensed under the MIT License.
